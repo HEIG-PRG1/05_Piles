@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdlib>
+#include "pile.hpp"
 using namespace std;
 
 
