@@ -32,5 +32,8 @@ bool empty(const int& count)
     }
     return false;
 }
-void size();
+int size(const int& count)
+{
+    return count;
+}
 void clear();

@@ -12,7 +12,7 @@ void push();
 void pop();
 void top();
 void empty();
-void size();
+int size(const int& count);
 void clear();
 
 #endif //PILE_H

@@ -6,6 +6,7 @@ using namespace std;
 
 int main() {
     int reponse = 0;
+    int count = 0;
 
     do {
         cout << "1 - Empiler\n"
@@ -52,7 +53,7 @@ int main() {
                 break;
             case 6:
                 cout << "Votre choix: " << reponse << endl;
-                size();
+                cout << "Nombre de valeurs : " << size(count) << endl;
                 break;
             case 7:
                 cout << "Votre choix: " << reponse << endl;
