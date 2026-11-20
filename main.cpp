@@ -57,7 +57,8 @@ int main() {
                 break;
             case 7:
                 cout << "Votre choix: " << reponse << endl;
-                clear();
+                clear(count);
+                cout << "Pile vidée." << endl;
                 break;
             case 8:
                 cout << "Votre choix: " << reponse << endl;

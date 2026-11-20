@@ -13,6 +13,6 @@ void pop();
 void top();
 void empty();
 int size(const int& count);
-void clear();
+void clear(int& count);
 
 #endif //PILE_H

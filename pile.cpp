@@ -36,4 +36,7 @@ int size(const int& count)
 {
     return count;
 }
-void clear();
+void clear(int& count)
+{
+    count = 0;
+}
