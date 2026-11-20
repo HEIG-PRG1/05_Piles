@@ -1,9 +1,11 @@
 #include <array>
 #include <iostream>
+#include <string>
 
 //
 // Created by maxsc on 18.11.2026.
 //
+
 void affichage_menu() {
     std::cout<<"Ce programme permet de manipuler une pile d'entiers."<<std::endl;
     std::cout<<"1 - Empiler"<<std::endl;
@@ -50,8 +52,21 @@ int select_options(int selection)
     }
     return selection;
 }
-void affichage (int selection)
+std::string& affichage_retour (int selection)
 {
-    std::array<std::string,12> options = {"Valeur empilée.","Valeur retirée :","Sommet :","Valeur de remplacement :","Valeur remplacée." ,"La pile n'est pas vide.","La pile est vide.","Sommet / Fond -> ","Erreur : impossible de dépiler une pile vide.","Nombre de valeurs : ","Sommet -> ","Fond   ->" };
+    std::array<std::string,12> options = {
+        "Valeur empilée.",
+        "Valeur retirée :",
+        "Sommet :",
+        "Valeur de remplacement :",
+        "Valeur remplacée." ,
+        "La pile n'est pas vide.",
+        "La pile est vide.",
+        "Sommet / Fond -> ",
+        "Erreur : impossible de dépiler une pile vide.",
+        "Nombre de valeurs : ",
+        "Sommet -> ",
+        "Fond   ->" };
+    return options&;
 }
 
