@@ -1,6 +1,7 @@
 #include <array>
 #include <iostream>
 #include <string>
+#include "function.h"
 
 //
 // Created by maxsc on 18.11.2026.
@@ -17,42 +18,9 @@ void affichage_menu() {
     std::cout<<"7 - Vider la pile"<<std::endl;
     std::cout<<"8 - Afficher toute la pile"<<std::endl;
     std::cout<<"0 - Quitter"<<std::endl;
-    std::cout<<"Valeur : ";
+
 }
-int select_options(int selection)
-{
-    switch (selection)
-    {
-        case 0:
-            break;
-        case 1:
-            //ta fonction
-            break;
-        case 2:
-            //ta fonction
-            break;
-        case 3:
-            //ta fonction
-            break;
-        case 4:
-            //ta fonction
-            break;
-        case 5:
-            //ta fonction
-            break;
-        case 6:
-            //ta fonction
-            break;
-        case 7:
-            //ta fonction
-            break;
-        case 8:
-            //ta fonction
-            break;
-    }
-    return selection;
-}
-std::string& affichage_retour (int selection)
+void affichage_retour (int selection)
 {
     std::array<std::string,12> options = {
         "Valeur empilée.",
@@ -67,6 +35,6 @@ std::string& affichage_retour (int selection)
         "Nombre de valeurs : ",
         "Sommet -> ",
         "Fond   ->" };
-    return options&;
+
 }
 
