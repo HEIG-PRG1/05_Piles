@@ -20,49 +20,6 @@ void affichage_menu() {
     std::cout<<"0 - Quitter"<<std::endl;
 
 }
-//
-int select_options(int selection)
-{
-    switch (selection)
-    {
-        case 0:
-            break;
-            //push
-        case 1:
-        push()
-            //ta fonction
-            break;
-            //pop
-        case 2:
-            //ta fonction
-            break;
-            //int top
-        case 3:
-            //ta fonction
-            break;
-            //void top
-        case 4:
-            //ta fonction
-            break;
-            //empty
-        case 5:
-            //ta fonction
-            break;
-            //size
-        case 6:
-            //ta fonction
-            break;
-            //clear
-        case 7:
-            //ta fonction
-            break;
-            //printpile
-        case 8:
-            //ta fonction
-            break;
-    }
-    return selection;
-}
 void affichage_retour (int selection)
 {
     std::array<std::string,12> options = {
