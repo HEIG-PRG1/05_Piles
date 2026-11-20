@@ -3,7 +3,7 @@
 //
 #include "function.h"
 
-void push(const int new_element,std::array<int, 5>& stack, int& virtual_size) {
+void push(const int new_element,std::array<int, capacite>& stack, unsigned short& virtual_size) {
     // check if the virtual size of stack is < than the max size of stack.
     if (virtual_size<stack.size()) {
         // push the element.
@@ -14,7 +14,7 @@ void push(const int new_element,std::array<int, 5>& stack, int& virtual_size) {
     // we cant push any element.
     throw(1);
 }
-void pop(std::array<int, 5>& stack, int& virtual_size) {
+void pop(std::array<int, capacite>& stack, unsigned short& virtual_size) {
     // check if the virtual size is not null.
     if (virtual_size > 0) {
         // erase the last element of the stack.
@@ -25,37 +25,38 @@ void pop(std::array<int, 5>& stack, int& virtual_size) {
         throw(1);
     }
 }
-int top(std::array<int, 5>& stack, int& virtual_size) {
+int top(std::array<int, capacite>& stack) {
+    const int virtual_size = 4;
     // this method returns the last element of the stack.
     if (virtual_size > 0) {
         return stack.at(virtual_size-1);
     }
     throw(1);
 }
-void top(const int new_element,std::array<int, 5>& stack, int& virtual_size) {
+int top(const int new_element,std::array<int, capacite>& stack, unsigned short& virtual_size) {
     // this method turns the last element of the stack into new_element.
     if (virtual_size > 0) {
         // the stack is not null.
         stack.at(virtual_size-1) = new_element;
     }
 }
-bool empty(std::array<int, 5>& stack, int& virtual_size) {
+bool empty(std::array<int, capacite>& stack, unsigned short& virtual_size) {
     // is the virtual size of stack null ?
     return (virtual_size==0)?true:false;
 }
-void clear(const std::array<int, 5>& stack, int& virtual_size) {
+void clear(const std::array<int, capacite>& stack, unsigned short& virtual_size) {
     set_size(virtual_size, 0);
 }
 
-void set_size(int& vsize, int new_size) {
+void set_size(unsigned short& vsize, unsigned short new_size) {
     vsize=new_size;
 }
-unsigned short size(const int virtual_size) {
+unsigned short size(const unsigned short virtual_size) {
     // return the virtual size of the stack.
     return virtual_size;
 }
 
-void print_pile(const std::array<int, 5>& stack, const int vsize) {
+void print_pile(const std::array<int, capacite>& stack, const unsigned short virtual_size) {
     std::string text_sommet = "Sommet ->";
     std::string text_fond = "Fond   ->";
     unsigned int num_spacing = std::max(text_sommet.length(), text_fond.length());
@@ -63,8 +64,8 @@ void print_pile(const std::array<int, 5>& stack, const int vsize) {
     for (int i = 0; i < num_spacing; i++) {
         spacing += " ";
     }
-    for (int i = vsize-1; i>=0; --i) {
-        if (i == vsize-1) {
+    for (int i = virtual_size-1; i>=0; --i) {
+        if (i == virtual_size-1) {
             std::cout << text_sommet;
             std::cout << stack.at(i) << std::endl;
         }

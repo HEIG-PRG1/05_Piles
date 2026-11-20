@@ -5,20 +5,11 @@
 #include <iostream>
 #include <array>
 #include "function.h"
-
-int main() {
-    // use it as a parameter for any further func.
-    const unsigned short virtual_size = 4;
-    std::array<int,5> text_a = {1,2,3,4,5};
-    print_pile(text_a,5);
-    return 0;
-}
 #include "affichage.h"
 #include "constantes.h"
 #include "function.h"
 #include <array>
 #include <iostream>
-
 int main () {
     int compteur= 0;
     std::array <int, 5> pille;
