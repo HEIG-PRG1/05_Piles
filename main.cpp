@@ -50,7 +50,7 @@ int main () {
             break;
         case 3:
             top(pille,vsize);
-           break;
+            break;
         case 4:
             std::cout<<"Valeur :";
             std::cin>>newvalue;
