@@ -40,3 +40,33 @@ void clear(int& count)
 {
     count = 0;
 }
+void show_pile(const Pile& pile, const int& count)
+{
+    if (empty(count))
+    {
+        cout << "La pile est vide." << endl;
+    }
+    else if (count == 1)
+    {
+        cout << "Sommet / Fond -> " << pile[0] << endl;
+    }
+    else
+    {
+        for (int i = count - 1; i >= 0; --i)
+        {
+            if (i == count - 1)
+            {
+                cout << "Sommet ->";
+            }
+            else if (i == 0)
+            {
+                cout << "Fond   ->";
+            }
+            else
+            {
+                cout << "         ";
+            }
+            cout << pile[i] << endl;
+        }
+    }
+}

@@ -6,6 +6,7 @@ using namespace std;
 
 int main() {
     int reponse = 0;
+    Pile pile;
     int count = 0;
 
     do {
@@ -62,7 +63,7 @@ int main() {
                 break;
             case 8:
                 cout << "Votre choix: " << reponse << endl;
-                show_pile();
+                show_pile(pile, count);
                 break;
             case 0:
                 cout << "Votre choix: " << reponse << endl;

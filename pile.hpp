@@ -14,5 +14,6 @@ void top();
 void empty();
 int size(const int& count);
 void clear(int& count);
+void show_pile(const Pile& pile, const int& count);
 
 #endif //PILE_H
