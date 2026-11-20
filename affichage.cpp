@@ -52,7 +52,7 @@ int select_options(int selection)
     }
     return selection;
 }
-std::string& affichage_retour (int selection)
+void affichage_retour (int selection)
 {
     std::array<std::string,12> options = {
         "Valeur empilée.",
@@ -67,6 +67,6 @@ std::string& affichage_retour (int selection)
         "Nombre de valeurs : ",
         "Sommet -> ",
         "Fond   ->" };
-    return options&;
+
 }
 
