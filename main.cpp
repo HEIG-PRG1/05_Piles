@@ -18,13 +18,25 @@ int main() {
              << "8 - Afficher toute la pile\n"
              << "0 - Quitter" << endl;
          cin >> reponse;
+
+
+        if (cin.fail())
+        {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << "Erreur : Saisie invalide" << endl;
+            continue;
+        }
+
+
         switch (reponse) {
             case 1:
                 cout << "Votre choix: " << reponse << endl;
-                empiler();
+                push();
+                break;
             case 2:
                 cout << "Votre choix: " << reponse << endl;
-                depiler();
+                pop();
                 break;
             case 3:
                 cout << "Votre choix: " << reponse << endl;
@@ -32,7 +44,7 @@ int main() {
                 break;
             case 4:
                 cout << "Votre choix: " << reponse << endl;
-                modifierTop();
+                top();
                 break;
             case 5:
                 cout << "Votre choix: " << reponse << endl;
@@ -48,7 +60,7 @@ int main() {
                 break;
             case 8:
                 cout << "Votre choix: " << reponse << endl;
-                afficherPile();
+                show_pile();
                 break;
             case 0:
                 cout << "Votre choix: " << reponse << endl;

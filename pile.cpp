@@ -8,9 +8,29 @@
 
 using namespace std;
 
-void push();
-void pop();
+
+void push(Pile& pile, int n, int& count)
+{
+    if (pile_size <= count)
+    {
+        throw std::out_of_range("la pile est pleine");
+    }
+    pile.at(count) = n;
+    count++;
+
+}
+void pop()
+{
+
+}
 void top();
-void empty();
+bool empty(const int& count)
+{
+    if (count == 0)
+    {
+        return true;
+    }
+    return false;
+}
 void size();
 void clear();
